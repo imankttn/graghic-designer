@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Web Sayfam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to right, #333, #666);
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            background: linear-gradient(to right, #666, #333);
+            display: inline;
+            padding: 0.2em 0.5em;
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        header .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Pacifico', cursive;
+        }
+        nav {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        .menu-toggle {
+            display: inline-block;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: white;
+        }
+        .menu-items {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: rgba(128, 128, 128, 0.8);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .menu-items a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .menu-items a:hover {
+            background-color: rgba(150, 150, 150, 0.8);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1em;
+        }
+        .section {
+            margin: 2em 0;
+            padding: 1em;
+            background-color: rgba(200, 200, 200, 0.8);
+            border-radius: 5px;
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5em;
+        }
+        .about, .contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .about img, .contact img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        .designs img {
+            width: 100%;
+            margin-bottom: 1em;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin: 1em 0;
+            padding: 1em;
+            background-color: rgba(220, 220, 220, 0.8);
+            border-radius: 5px;
+        }
+        .contact-info img {
+            margin-right: 15px;
+        }
+        footer {
+            background-color: rgba(128, 128, 128, 0.8);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            clear: both;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 768px) {
+            nav {
+                position: static;
+                text-align: center;
+                margin-top: 1em;
+            }
+            .menu-items {
+                position: static;
+                display: block;
+                margin-top: 1em;
+            }
+            .menu-toggle {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            var menuItems = document.getElementById('menu-items');
+            if (menuItems.style.display === 'block') {
+                menuItems.style.display = 'none';
+            } else {
+                menuItems.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Grafik Tasarım</h1>
+        <a href="#" class="logo">DS</a>
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">≡</div>
+            <div id="menu-items" class="menu-items">
+                <a href="#contact">İletişim</a>
+                <a href="#about">Hakkımda</a>
+                <a href="#designs">Tasarımlarım</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about" class="section about">
+            <h2>Hakkımda</h2>
+            <div>
+                <img src="https://via.placeholder.com/300" alt="Benim Fotoğrafım">
+                <p>Merhaba! Ben [Adınız], grafik tasarımcıyım. Yaratıcı ve dikkat çekici tasarımlar yapmayı seviyorum. [Kendiniz hakkında kısa bir bilgi ekleyin.]</p>
+            </div>
+        </section>
+        <section id="designs" class="section designs">
+            <h2>Tasarımlarım</h2>
+            <div>
+                <img src="https://via.placeholder.com/600x400" alt="Tasarım 1">
+                <img src="https://via.placeholder.com/600x400" alt="Tasarım 2">
+                <img src="https://via.placeholder.com/600x400" alt="Tasarım 3">
+                <!-- Buraya daha fazla grafik tasarım ekleyebilirsiniz -->
+            </div>
+        </section>
+        <section id="contact" class="section contact">
+            <h2>İletişim</h2>
+            <div class="contact-info">
+                <img src="https://via.placeholder.com/50" alt="WhatsApp">
+                <p><a href="https://wa.me/1234567890" target="_blank">WhatsApp ile iletişim kur</a></p>
+            </div>
+            <div class="contact-info">
+                <img src="https://via.placeholder.com/50" alt="Email">
+                <p><a href
